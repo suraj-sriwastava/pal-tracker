@@ -41,12 +41,12 @@ jobs:
             apt-get install cf-cli
       - run:
           name: Install jq
-          command: |
+          command: 
             apt-get -y install jq
 
       - run:
           name: Install flyway
-          command: |
+          command: 
             curl https://repo1.maven.org/maven2/org/flywaydb/flyway-commandline/5.1.1/flyway-commandline-5.1.1-linux-x64.tar.gz | tar xvz
 
       - run:
@@ -83,13 +83,13 @@ jobs:
             apt-get update
             apt-get install cf-cli
       - run:
-         name: Install jq
-          command: |
+          name: Install jq
+          command:  |
             apt-get -y install jq
 
       - run:
           name: Install flyway
-          command: |
+          command: 
             curl https://repo1.maven.org/maven2/org/flywaydb/flyway-commandline/5.1.1/flyway-commandline-5.1.1-linux-x64.tar.gz | tar xvz
 
       - run:
