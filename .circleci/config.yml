@@ -41,12 +41,12 @@ jobs:
             apt-get install cf-cli
       - run:
           name: Install jq
-          command: 
+          command: |
             apt-get -y install jq
 
       - run:
           name: Install flyway
-          command: 
+          command: |
             curl https://repo1.maven.org/maven2/org/flywaydb/flyway-commandline/5.1.1/flyway-commandline-5.1.1-linux-x64.tar.gz | tar xvz
 
       - run:
@@ -59,7 +59,6 @@ jobs:
           name: Deploy
           command: |
             cd $EXTRACT_DEST
-
             cf login -a $CF_API -u $CF_USERNAME -p $CF_PASSWORD -o $CF_ORG -s $ENVIRONMENT
             cf push -f manifest-$ENVIRONMENT.yml
             ./migrate-databases.sh pal-tracker . /root/project
@@ -85,12 +84,12 @@ jobs:
             apt-get install cf-cli
       - run:
          name: Install jq
-          command: 
+          command: |
             apt-get -y install jq
 
       - run:
           name: Install flyway
-          command: 
+          command: |
             curl https://repo1.maven.org/maven2/org/flywaydb/flyway-commandline/5.1.1/flyway-commandline-5.1.1-linux-x64.tar.gz | tar xvz
 
       - run:
