@@ -84,8 +84,7 @@ jobs:
             apt-get install cf-cli
       - run:
          name: Install jq
-          command:  |
-             apt-get -y install jq
+          command: apt-get -y install jq
 
       - run:
           name: Install flyway
