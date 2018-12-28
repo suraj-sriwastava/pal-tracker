@@ -61,7 +61,7 @@ jobs:
             cd $EXTRACT_DEST
             cf login -a $CF_API -u $CF_USERNAME -p $CF_PASSWORD -o $CF_ORG -s $ENVIRONMENT
             cf push -f manifest-$ENVIRONMENT.yml
-            chmod +x ./migrate-databases.sh pal-tracker . /root/project
+            sh ./migrate-databases.sh pal-tracker . /root/project
 
   deployToProd:
     docker:
@@ -104,7 +104,7 @@ jobs:
             cd $EXTRACT_DEST
             cf login -a $CF_API -u $CF_USERNAME -p $CF_PASSWORD -o $CF_ORG -s $ENVIRONMENT
             cf push -f manifest-$ENVIRONMENT.yml
-            chmod +x ./migrate-databases.sh pal-tracker . /root/project
+            sh ./migrate-databases.sh pal-tracker . /root/project
 
 workflows:
   version: 2
