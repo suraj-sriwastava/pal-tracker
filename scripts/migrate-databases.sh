@@ -10,6 +10,7 @@ db_name=`echo $credentials | jq -r '.name'`
 db_username=`echo $credentials | jq -r '.username'`
 db_password=`echo $credentials | jq -r '.password'`
 
+echo "$credentials"
 echo "$ip_address"
 echo "$db_name"
 echo "$db_username"
