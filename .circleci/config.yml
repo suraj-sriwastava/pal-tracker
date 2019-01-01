@@ -15,7 +15,7 @@ jobs:
             service mysql start
 
             # Wait for MySQL to start
-            sleep 5
+            sleep 30
 
       - run:
           name: Install flyway
