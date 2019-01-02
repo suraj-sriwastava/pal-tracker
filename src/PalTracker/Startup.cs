@@ -14,6 +14,7 @@ using Microsoft.Extensions.Options;
 using Steeltoe.CloudFoundry.Connector.MySql.EFCore;
 using Steeltoe.Common.HealthChecks;
 using Steeltoe.Management.CloudFoundry;
+using Steeltoe.Management.Endpoint.CloudFoundry;
 using Steeltoe.Management.Endpoint.Info;
 
 namespace PalTracker
@@ -61,6 +62,7 @@ namespace PalTracker
             app.UseHttpsRedirection();
             app.UseMvc();
             app.UseCloudFoundryActuators();
+            app.UseCloudFoundrySecurity();
         }
     }
 }
